@@ -129,3 +129,21 @@ public class Moto extends Veiculos {
         }
     }
 }
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            Carro carro = new Carro("Ford", "Fiesta", 2020, 4);
+            Moto moto = new Moto("Honda", "CB500", 2021, true);
+
+            System.out.println(carro.descricao());
+            System.out.println("Custo de manutenção do carro: R$ " + carro.calcularCustoManutencao());
+
+            System.out.println(moto.descricao());
+            System.out.println("Custo de manutenção da moto: R$ " + moto.calcularCustoManutencao());
+
+        } catch (IllegalArgumentException e) {
+            System.out.println("Erro: " + e.getMessage());
+        }
+    }
+}
